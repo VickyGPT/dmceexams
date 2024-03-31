@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .box {
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box h1 {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .box p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .box input[type="text"],
+        .box input[type="password"] {
+            border: 2px solid #3498db;
+            background: none;
+            display: block;
+            margin: 0 auto 20px;
+            padding: 10px;
+            width: 250px;
+            outline: none;
+            color: #333;
+            border-radius: 24px;
+            transition: 0.25s;
+        }
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            width: 300px;
+            border-color: #2ecc71;
+        }
+        .box input[type="submit"] {
+            border: none;
+            background: #2ecc71;
+            display: block;
+            margin: 0 auto;
+            padding: 14px 40px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .box input[type="submit"]:hover {
+            background: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Student Login</h1>
+        <p>Please enter your login and password!</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

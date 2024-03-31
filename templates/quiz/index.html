@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  .jumbotron{
+    margin-bottom: 0px;
+  }
+</style>
+<body>
+  {% include "quiz/navbar.html" %}
+<br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center" style="height:100vh">
+  <div class="container text-center">
+    <h1 class="display-1 text-info">DMCE EXAMS</h1>
+    
+    <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 35px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a>
+    
+     
+  </div>  
+</section>
+
+
+  {% include "quiz/footer.html" %}
+
+
+</body>
+
+</html>
